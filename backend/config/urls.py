@@ -20,7 +20,7 @@ from pella import views
 
 router = routers.DefaultRouter()
 router.register('mentors', views.MentorViewSet)
-router.register('internships', views.InternshipViewSets)
+router.register('internships', views.InternshipViewSet)
 router.register('referrals', views.ReferralViewSet)
 router.register('mentees', views.MenteeViewSet)
 
