@@ -22,7 +22,7 @@ class Internship(models.Model):
   def __str__(self):
     return self.title
 
-class Referrals(models.Model):
+class Referral(models.Model):
   title = models.CharField(max_length=256)
   comment = models.CharField(max_length=256)
   rating = rating = models.FloatField()
