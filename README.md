@@ -24,7 +24,7 @@ The backend is built using Django with a postgres database, deployed on heroku. 
 - React-Router
 
 ## Entity Relationship Diagram
-<img src="./Assets/erd2.png" style=" width:700px ; height:500px " alt="Entity Relationship Diagram" />
+<img src="./Assets/erd3.png" style=" width:700px ; height:500px " alt="Entity Relationship Diagram" />
 <br><br>
 
 ## Wireframe
