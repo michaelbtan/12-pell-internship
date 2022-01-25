@@ -1,6 +1,8 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom"
 import Home from './screens/Home/Home.js'
+import About from './screens/About/About.js'
+
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
         <Route path='/internships' element={null} />
         <Route path='/mentors' element={null} />
         <Route path='/contact' element={<contact />} />
-        <Route path='/about' element={<about />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </div>
   );
