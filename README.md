@@ -14,6 +14,15 @@ Youth interns will eventually be able to apply for access to the site with a res
 
 The backend is built using Django with a postgres database, deployed on heroku. The frontend is built with react and deployed on netlify.
 
+## Dependencies
+
+- Django
+- Django Rest Framework
+- Axios
+- React
+- React-DOM
+- React-Router
+
 ## Entity Relationship Diagram
 <img src="./Assets/ERD.png" style=" width:700px ; height:500px " alt="Entity Relationship Diagram" />
 <br><br>
