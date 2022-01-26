@@ -1,0 +1,5 @@
+.about_banner_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4vh;
+}

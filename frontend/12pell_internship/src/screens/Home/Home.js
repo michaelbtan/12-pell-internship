@@ -1,10 +1,16 @@
 import React from 'react';
-import Nav from '../../components/Nav/Nav.js'
+import Header from '../../components/Header/Header.js'
+import Layout from '../../components/Layout/Layout.js'
+
 
 export default function Home() {
   return (
     <div>
-      <Nav />
+      <Header />
+      <Layout>
+        <div>
+        </div>
+      </Layout>
     </div>
   )
 }

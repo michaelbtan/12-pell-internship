@@ -1,0 +1,35 @@
+
+.nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background-color: #075A91;
+}
+
+.nav_link_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.logo_nav {
+  margin-left: 20px;
+  width: 8em;
+  height: 8em;
+}
+
+.middle_links  {
+  text-decoration: none;
+  color: #FFFFFF;
+  margin: 1vw;
+  font-family: 'Readex Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.right_links {
+  text-decoration: none;
+  color: #FFFFFF;
+}

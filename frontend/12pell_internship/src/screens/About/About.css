@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Roboto:ital,wght@0,300;1,900&display=swap');
+.about_container  {
+  display: flex;
+  justify-content: center;
+}
+
+.about_header  {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  align-items: center;
+  padding: 50px;
+}
+
+.about_header_h1  {
+  font-family: 'Readex Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 72px;
+  color: #075A91;
+  font-weight: bold;
+  margin-right: 2vw;
+}
+
+.about_header_p {
+  width: 40vw;
+  font-family: 'Readex Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  margin-left: 2vw;
+}
