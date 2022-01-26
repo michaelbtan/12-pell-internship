@@ -17,6 +17,15 @@ export default function Signin() {
             placeholder="Enter Email"
             // onChange={handleChange}
           />
+          <input
+            className="signin_input"
+            required
+            type="text"
+            name="email"
+            // value={form.password}
+            placeholder="Enter Password"
+            // onChange={handleChange}
+          />
         </div>
       </div>
     </div>

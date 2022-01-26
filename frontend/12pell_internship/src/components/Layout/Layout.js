@@ -4,12 +4,16 @@ import Footer from "../Footer/Footer"
 
 export default function Layout (props) {
     return (
-        <div className = "layout"> 
+      <div className="layout"> 
+        <div className="nav">
           <Nav />
-          <div className = "layout-children">
+        </div>
+          <div className="body">
             {props.children}
-          </div>
+        </div>
+        <div className="footer">
           <Footer />
+        </div>
         </div>
     )
 }

@@ -41,7 +41,7 @@ export default function Account() {
             </>
           }
         </div>
-        {login ? <Signup /> : <Signin /> }
+        {login ? <Signin /> : <Signup /> }
       </div>
     </Layout>
   )}
