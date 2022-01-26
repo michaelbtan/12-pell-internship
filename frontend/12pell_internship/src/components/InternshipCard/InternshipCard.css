@@ -1,0 +1,9 @@
+.internship_card  {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 25vh;
+  width: 50vw;
+  border: 1px solid black;
+  display: flex;
+  background-color: #e3e3e3;
+}

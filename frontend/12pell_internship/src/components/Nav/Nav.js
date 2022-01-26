@@ -11,12 +11,12 @@ export default function Nav() {
       </div>
       <div className="middle_nav">
         <Link className="middle_links" to='/internships'>Internships</Link>
-        <Link className="middle_links" to='/Mentors'>Mentors</Link>
-        <Link className="middle_links" to='/About'>About</Link>
+        <Link className="middle_links" to='/mentors'>Mentors</Link>
+        <Link className="middle_links" to='/about'>About</Link>
         <Link className="middle_links" to='/Contact'>Contact</Link>
       </div>
       <div className="right_nav">
-        <Link className="right_links" to='/Contact'>signup icon</Link>
+        <Link className="right_links" to='/account'>signup icon</Link>
       </div>
       </div>
     </div>

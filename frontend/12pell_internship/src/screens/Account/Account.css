@@ -1,0 +1,23 @@
+.account_container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+/* Toggles */
+.signin_toggle, .signup_toggle {
+  border: none;
+  background-color: #e3e3e3;
+  width: 15vw;
+  height: 6vh;
+}
+
+.signin_toggle_white, .signup_toggle_white  {
+  border: none;
+  width: 15vw;
+  height: 6vh;
+}
+

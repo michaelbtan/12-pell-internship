@@ -1,4 +1,8 @@
 .footer_container {
-  height: 10vh;
-  background-color: #075A91;
+  height: 6vh;
+  background-color: #09243B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
 }
