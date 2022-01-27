@@ -16,6 +16,7 @@ import dj_database_url
 
 from dotenv import load_dotenv
 load_dotenv()
+SECRET_KEY = os.getenv('SECRET_KEY')
 IS_PRODUCTION = os.getenv('PRODUCTION') == 'yes'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +29,6 @@ else:
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-noq9i+ha52y$pc*wx3@$ha((%shy3i3#q1cye&5%wb7fv9^(+s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,20 +80,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-REST_FRAMEWORK = {
-  'DEFAULT_AUTHENTICATION_CLASSES': (
-    'rest_framework_simplejwt.authentication.JWTAuthentication',
-  ),
-  #  'DEFAULT_PERMISSION_CLASSES': (
-  #       'rest_framework.permissions.IsAdminUser'
-  #  ),
-}
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 if IS_PRODUCTION:
     DATABASES = {
-      'default':dj_database_url.config(conn_max_age=600, ssl_require=True)
+      'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 else:
     DATABASES = {
@@ -145,9 +136,18 @@ if IS_PRODUCTION:
   STATIC_URL = '/static/'
   STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 else:
-  STATIC_URL = '/static/'
+  STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+  ),
+  #  'DEFAULT_PERMISSION_CLASSES': (
+  #       'rest_framework.permissions.IsAdminUser'
+  #  ),
+}
