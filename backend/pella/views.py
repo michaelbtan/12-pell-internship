@@ -17,9 +17,9 @@ class InternshipViewSet(viewsets.ModelViewSet):
 class ReferralViewSet(viewsets.ModelViewSet):
   queryset = Referral.objects.all()
   serializer_class = ReferralSerializer
-  # permission_classes = [permissions.IsAuthenticated]
+  permission_classes = [permissions.IsAuthenticated]
 
 class MenteeViewSet(viewsets.ModelViewSet):
   queryset = Mentee.objects.all()
   serializer_class = MenteeSerializer
-  # permission_classes = [permissions.IsAuthenticated]
+  permission_classes = [permissions.IsAuthenticated]

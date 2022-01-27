@@ -9,6 +9,9 @@ django = "*"
 psycopg2-binary = "*"
 pillow = "*"
 djangorestframework-simplejwt = "*"
+whitenoise = "*"
+dj-database-url = "*"
+gunicorn = "*"
 
 [dev-packages]
 
