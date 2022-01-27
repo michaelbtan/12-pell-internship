@@ -92,13 +92,12 @@ REST_FRAMEWORK = {
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 if IS_PRODUCTION:
-  DATABASES = {
-    dj_database_url.config(conn_max_age=600, ssl_require=True)
-  }
+    DATABASES = {
+      'default':dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }
 else:
-  DATABASES = {
-    'default': 
-    {
+    DATABASES = {
+      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pell_mentorship_program',
         'USER': 'pell_admin',
