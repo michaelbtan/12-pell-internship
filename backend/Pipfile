@@ -12,6 +12,7 @@ djangorestframework-simplejwt = "*"
 whitenoise = "*"
 dj-database-url = "*"
 gunicorn = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

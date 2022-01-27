@@ -13,9 +13,17 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import dotenv import load_dotenv
+
+from dotenv import load_dotenv
+load_dotenv()
+IS_PRODUCTION = (os.getenv('PRODUCTION') = 'yes')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if IS_PRODUCTION:
+  BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+else:
+  BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -84,17 +92,20 @@ REST_FRAMEWORK = {
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': 
-    # {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'pell_mentorship_program',
-    #     'USER': 'pell_admin',
-    #     'PASSWORD': 'pella',
-    #     'HOST': 'localhost'
-    # }
+if IS_PRODUCTION:
+  DATABASES = {
     dj_database_url.config(conn_max_age=600, ssl_require=True)
+  }
+else:
+  DATABASES = {
+    'default': 
+    {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pell_mentorship_program',
+        'USER': 'pell_admin',
+        'PASSWORD': 'pella',
+        'HOST': 'localhost'
+    }
 }
 
 
@@ -131,12 +142,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+if IS_PRODUCTION:
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+  STATIC_URL = '/static/'
+  STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+else:
+  STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
