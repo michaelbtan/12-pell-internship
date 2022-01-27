@@ -13,11 +13,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import dotenv import load_dotenv
 
 from dotenv import load_dotenv
 load_dotenv()
-IS_PRODUCTION = (os.getenv('PRODUCTION') = 'yes')
+IS_PRODUCTION = os.getenv('PRODUCTION') == 'yes'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 if IS_PRODUCTION:
