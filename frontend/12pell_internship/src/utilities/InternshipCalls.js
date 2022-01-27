@@ -6,5 +6,5 @@ export const getInternship = async () => {
     return res.data;
   } catch (error) {
     throw error;
-    }
-}
+  }
+};
