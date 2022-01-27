@@ -7,12 +7,12 @@ from pella.models import Mentor, Internship, Referral, Mentee
 class MentorViewSet(viewsets.ModelViewSet):
   queryset = Mentor.objects.all()
   serializer_class = MentorSerializer
-  # permission_classes = [permissions.IsAuthenticated]
+  permission_classes = [permissions.IsAuthenticated]
 
 class InternshipViewSet(viewsets.ModelViewSet):
   queryset = Internship.objects.all()
   serializer_class = InternshipSerializer
-  # permission_classes = [permissions.IsAuthenticated]
+  permission_classes = [permissions.IsAuthenticated]
 
 class ReferralViewSet(viewsets.ModelViewSet):
   queryset = Referral.objects.all()

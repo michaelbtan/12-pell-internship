@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,13 +86,15 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pell_mentorship_program',
-        'USER': 'pell_admin',
-        'PASSWORD': 'pella',
-        'HOST': 'localhost'
-    }
+    'default': 
+    # {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'pell_mentorship_program',
+    #     'USER': 'pell_admin',
+    #     'PASSWORD': 'pella',
+    #     'HOST': 'localhost'
+    # }
+    dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 
