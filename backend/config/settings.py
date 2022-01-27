@@ -154,3 +154,5 @@ REST_FRAMEWORK = {
   #       'rest_framework.permissions.IsAdminUser'
   #  ),
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
