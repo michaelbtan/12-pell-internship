@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from pella.models import Mentor, Internship, Referral, Mentee
+from pella3.models import Mentor, Internship, Referral, Mentee
 
 class MentorSerializer(serializers.HyperlinkedModelSerializer):
   internships = serializers.StringRelatedField(many=True)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from pella.serializers import MentorSerializer, InternshipSerializer, ReferralSerializer, MenteeSerializer
-from pella.models import Mentor, Internship, Referral, Mentee
+from pella3.serializers import MentorSerializer, InternshipSerializer, ReferralSerializer, MenteeSerializer
+from pella3.models import Mentor, Internship, Referral, Mentee
 
 class MentorViewSet(viewsets.ModelViewSet):
   queryset = Mentor.objects.all()
