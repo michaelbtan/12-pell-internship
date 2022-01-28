@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './MentorCard.css'
 
 export default function MentorCard(props) {
@@ -8,7 +9,7 @@ export default function MentorCard(props) {
       <div>
         <h1>{props.name}</h1>
       <p>{props.bio}</p>
-        <button>See More</button>
+      <Link to={`/mentors/${props.id}`}>See More</Link>
       </div>
     </div>
   )}

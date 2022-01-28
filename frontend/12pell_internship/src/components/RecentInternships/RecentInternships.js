@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import { getInternships } from '../../utilities/InternshipCalls.js'
 import InternshipCard from '../../components/InternshipCard/InternshipCard.js'
-
+import './RecentInternships.css'
 
 export default function RecentInternships() {
 
@@ -17,9 +17,15 @@ export default function RecentInternships() {
   }, [])
 
   return (
-        <div className="internship_cards">
-          {internships.map((internship) => (
-            <InternshipCard title={internship.title} description={internship.description} image={internship.image}/>
+    <div className="internship_listing_container">
+
+      {internships.map((internship) => (
+          <div className="recent_internship_cards">
+          <InternshipCard
+            title={internship.title}
+            description={internship.description}
+            image={internship.image} />
+          </div>
           ))}
-        </div>
+    </div>
   )}

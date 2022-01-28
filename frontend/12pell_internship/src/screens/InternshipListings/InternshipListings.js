@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout.js'
 import { getInternships } from '../../utilities/InternshipCalls.js'
 import InternshipCard from '../../components/InternshipCard/InternshipCard.js'
 import FilterContainer from '../../components/FilterContainer/FilterContainer.js'
-
+import './InternshipListings.css'
 
 export default function InternshipListings() {
 

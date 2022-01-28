@@ -1,4 +1,5 @@
 .filter_container {
-  height: 10vh;
-  width: 20vw;
+  height: 30vh;
+  width: 15vw;
+  border: 1px solid red
 }

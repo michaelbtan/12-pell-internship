@@ -10,3 +10,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.home_headers {
+  margin-bottom: 10px;
+}

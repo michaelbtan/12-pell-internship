@@ -12,9 +12,9 @@ export default function Home() {
       <Layout>
         <div className="body_container">
           <div className="body_home">
-            <h1>New Internship Opportunities</h1>
+            <h1 className="home_headers">New Internship Opportunities</h1>
             <RecentInternships />
-            <h1>Featured Mentors</h1>
+            <h1 className="home_headers">Featured Mentors</h1>
             <FeaturedMentors />
           </div>
         </div>

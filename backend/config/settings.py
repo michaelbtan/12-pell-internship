@@ -64,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 TEMPLATES = [
     {
@@ -141,6 +143,15 @@ if IS_PRODUCTION:
 else:
   STATIC_URL = 'static/'
 
+# STATICFILES_DIRS=[
+#     os.path.join(BASE_DIR,"assets")
+# ]
+# STATIC_ROOT=os.path.join(BASE_DIR,"static_cdn","static_root")
+# MEDIA_URL='/media/'
+# MEDIA_ROOT=os.path.join(BASE_DIR,"static_cdn","media_root")
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -155,4 +166,3 @@ REST_FRAMEWORK = {
   #  ),
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
