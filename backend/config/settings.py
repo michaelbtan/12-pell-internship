@@ -33,7 +33,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pella12.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['pella12.herokuapp.com', 'localhost',]
 
 
 # Application definition
@@ -92,16 +92,24 @@ if IS_PRODUCTION:
       'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 else:
+#     DATABASES = {
+#       'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'pell_mentorship_program',
+#         'USER': 'pell_admin',
+#         'PASSWORD': 'pella',
+#         'HOST': 'localhost'
+#     }
+# }
     DATABASES = {
       'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pell_mentorship_program',
-        'USER': 'pell_admin',
-        'PASSWORD': 'pella',
+        'NAME': 'pella2',
+        'USER': 'pella_admin2',
+        'PASSWORD': 'password',
         'HOST': 'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

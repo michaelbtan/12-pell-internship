@@ -33,7 +33,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pella12.herokuapp.com', 'localhost',]
+ALLOWED_HOSTS = ['pella3.herokuapp.com/', 'localhost',]
 
 
 # Application definition

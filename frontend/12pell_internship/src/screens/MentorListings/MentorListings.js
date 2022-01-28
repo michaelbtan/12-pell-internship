@@ -24,7 +24,8 @@ export default function MentorListings() {
           <div className="filter_mentor_container">
             <MentorCard
               name={mentor.name}
-              bio={mentor.bio} />
+              bio={mentor.bio}
+              id={mentor.id} />
            </div>
             ))}
       </div>

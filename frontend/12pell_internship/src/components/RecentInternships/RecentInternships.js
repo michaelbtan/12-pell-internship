@@ -24,7 +24,8 @@ export default function RecentInternships() {
           <InternshipCard
             title={internship.title}
             description={internship.description}
-            image={internship.image} />
+            image={internship.image}
+            id={internship.id} />
           </div>
           ))}
     </div>

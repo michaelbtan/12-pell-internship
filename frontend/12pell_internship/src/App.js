@@ -8,6 +8,8 @@ import InternshipListings from './screens/InternshipListings/InternshipListings.
 import InternshipDetails from './screens/InternshipDetails/InternshipDetails.js'
 import MentorListings from './screens/MentorListings/MentorListings.js'
 import MentorDetails from './screens/MentorDetails/MentorDetails.js'
+import PostInternship from './screens/PostInternship/PostInternship.js'
+import UpdateInternship from './screens/UpdateInternship/UpdateInternship.js'
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
         <Route path='/account' element={<Account />} />
+        <Route path='/postinternship' element={<PostInternship />} />
+        <Route path='/updateinternship' element={<UpdateInternship />} />
       </Routes>
     </div>
   );

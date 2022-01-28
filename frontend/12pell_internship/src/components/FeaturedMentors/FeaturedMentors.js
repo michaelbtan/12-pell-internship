@@ -23,7 +23,8 @@ export default function MentorListings() {
         <div className="featured_mentorcard">
         <MentorCard
             name={mentor.name}
-            bio={mentor.bio} />
+            bio={mentor.bio}
+            id={mentor.id} />
         </div>
         ))}
       </div>

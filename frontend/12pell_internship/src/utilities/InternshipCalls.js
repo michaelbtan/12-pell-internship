@@ -11,7 +11,7 @@ export const getInternships = async () => {
 
 export const getInternship = async (id) => {
   try {
-    const res = await api.get(`/internships/${id}`);
+    const res = await api.get(`/internships/${id}/`);
     return res.data;
   } catch (error) {
     throw error;

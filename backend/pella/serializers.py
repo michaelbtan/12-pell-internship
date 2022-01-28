@@ -6,19 +6,19 @@ class MentorSerializer(serializers.HyperlinkedModelSerializer):
   referrals = serializers.StringRelatedField(many=True)
   class Meta:
     model = Mentor
-    fields = ['id', 'name', 'email', 'bio', 'image', 'internships', 'referrals']
+    fields = ['id', 'name', 'email', 'bio', 'imageURL', 'internships', 'referrals']
 
 class InternshipSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Internship
-    fields = ['id', 'title', 'description', 'industry', 'image', 'paid_unpaid', 'mentor']
+    fields = ['id', 'title', 'description', 'industry', 'imageURL', 'paid', 'mentor']
 
 class ReferralSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Referral
-    fields = ['title', 'comment', 'rating', 'mentor']
+    fields = ['id', 'title', 'comment', 'rating', 'mentor']
 
 class MenteeSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Mentee
-    fields = ['name', 'email', 'interest']
+    fields = ['id', 'name', 'email', 'interest']

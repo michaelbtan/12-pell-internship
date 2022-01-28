@@ -11,7 +11,7 @@ export const getMentors = async () => {
 
 export const getMentor = async (id) => {
   try {
-    const res = await api.get(`/mentors/${id}`)
+    const res = await api.get(`/mentors/${id}/`)
     return res.data;
   } catch (error) {
     throw error
