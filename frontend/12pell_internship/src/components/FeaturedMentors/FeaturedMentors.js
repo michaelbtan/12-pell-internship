@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import Layout from '../../components/Layout/Layout.js'
 import { getMentors } from '../../utilities/MentorCalls.js'
 import MentorCard from '../../components/MentorCard/MentorCard.js'
+import './FeaturedMentors.css'
+
 
 export default function MentorListings() {
 
@@ -10,19 +11,20 @@ export default function MentorListings() {
   useEffect(() => {
     const fetchMentors = async () => {
       const foundMentors = await getMentors();
+      // const featuredMentors = foundMentors[Math.floor(Math.random() * foundMentors.length)]
       setMentors(foundMentors);
     }
     fetchMentors()
   }, [])
 
   return (
-    <Layout>
-      <div>
+      <div className="featured_mentors_container">
       {mentors.map((mentor) => (
+        <div className="featured_mentorcard">
         <MentorCard
-          name={mentor.name}
-          bio={mentor.bio} />
+            name={mentor.name}
+            bio={mentor.bio} />
+        </div>
         ))}
       </div>
-    </Layout>
   )}

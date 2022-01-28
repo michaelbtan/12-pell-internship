@@ -4,7 +4,7 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div className="footer_container">
-      <h4>WTF $60 Haircuts</h4>
+      <h4>12Pell C</h4>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import './Layout.css'
 import Nav from "../Nav/Nav"
 import Footer from "../Footer/Footer"
 
-export default function Layout (props) {
+export default function Layout(props) {
     return (
       <div className="layout"> 
         <div className="nav">

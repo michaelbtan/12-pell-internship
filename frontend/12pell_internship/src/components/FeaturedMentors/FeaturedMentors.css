@@ -1,0 +1,8 @@
+.featured_mentors_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .featured_mentorcard {
+  margin: 10px;
+} */
