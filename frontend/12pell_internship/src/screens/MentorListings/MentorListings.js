@@ -19,12 +19,14 @@ export default function MentorListings() {
 
   return (
     <Layout>
+      <h1 className="mentor_listing_header">Mentors</h1>
       <div className="mentor_listings_container">
         {mentors.map((mentor) => (
           <div className="filter_mentor_container">
             <MentorCard
               name={mentor.name}
               bio={mentor.bio}
+              imageURL={mentor.imageURL}
               id={mentor.id} />
            </div>
             ))}

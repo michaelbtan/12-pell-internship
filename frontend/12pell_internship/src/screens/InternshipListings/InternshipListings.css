@@ -3,4 +3,11 @@
   width: 80vw;
   justify-content: space-between;
   flex-direction: row;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.internship_listing_header  {
+  margin-top: 5vh;
+  text-align: center;
 }

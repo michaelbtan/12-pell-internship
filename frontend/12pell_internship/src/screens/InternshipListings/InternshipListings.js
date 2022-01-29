@@ -20,6 +20,7 @@ export default function InternshipListings() {
 
   return (
     <Layout>
+      <h1 className="internship_listing_header">Internship Listings</h1>
       <div className="internship_listings_container">
         <div className="filter_container">
           <FilterContainer />
@@ -28,7 +29,7 @@ export default function InternshipListings() {
           {internships.map((internship) => (
             <InternshipCard title={internship.title}
               description={internship.description}
-              image={internship.image}
+              imageURL={internship.imageURL}
               id={internship.id} />
           ))}
         </div>

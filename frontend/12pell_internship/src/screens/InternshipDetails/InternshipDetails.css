@@ -1,0 +1,28 @@
+.internship_details_container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
+.internship_details_info  {
+  margin-left: 3vw;
+}
+
+.internship_details_title  {
+  font-size: 72px;
+}
+
+.internship_details_industry  {
+  font-size: 48px;
+}
+
+.internship_details_description {
+  font-size: 24px;
+}
+
+
+.internship_edit_delete {
+  display: flex;
+}

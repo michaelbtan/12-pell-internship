@@ -5,7 +5,7 @@ import './MentorCard.css'
 export default function MentorCard(props) {
   return (
     <div className="mentor_card">
-      <img src='/' alt='Mentor Pic' />
+      <img src={props.imageURL} height="250px" width="250px" alt='Mentor Pic' />
       <div>
         <h1>{props.name}</h1>
       <p>{props.bio}</p>

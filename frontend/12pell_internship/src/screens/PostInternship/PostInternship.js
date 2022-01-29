@@ -1,27 +1,38 @@
 import React from "react";
 import "./PostInternship.css";
 import Layout from "../../components/Layout/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createInternship } from "../../utilities/InternshipCalls";
+import { getMentors } from "../../utilities/MentorCalls";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateProduct() {
   const [title, setTitle] = useState("");
   const [industry, setIndustry] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [paid_unpaid, setPaid_unpaid] = useState("");
-
+  const [imageURL, setImageURL] = useState("");
+  const [paid, setPaid] = useState("");
+  const [mentors, setMentors] = useState([])
+  const [mentor, setMentor] = useState()
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchMentors = async () => {
+      const foundMentors = await getMentors();
+      setMentors(foundMentors);
+    }
+    fetchMentors()
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newSubmit = {
       title,
       description,
-      image,
+      imageURL,
       industry,
-      paid_unpaid,
+      paid,
+      mentor,
     };
     await createInternship(newSubmit);
     navigate("/");
@@ -50,7 +61,7 @@ export default function CreateProduct() {
               value={industry}
               placeholder="Industry"
               onChange={(e) => setIndustry(e.target.value)}
-              id="price"
+              id="industry"
             />
             <label>Description</label>
             <input
@@ -63,20 +74,34 @@ export default function CreateProduct() {
             <label>Img Url</label>
             <input
               type="url"
-              value={image}
+              value={imageURL}
               placeholder="Image Url"
-              onChange={(e) => setImage(e.target.value)}
-              id="img"
+              onChange={(e) => setImageURL(e.target.value)}
+              id="imageURL"
             />
             <label>Paid?</label>
             <select
-              id="setPaid_unpaid"
-              name="setPaid_unpaid"
-              onChange={(e) => setPaid_unpaid(e.target.value)}
+              id="paid"
+              name="setPaid"
+              onChange={(e) => setPaid(e.target.value)}
             >
-              <option value="null">Select Category</option>
+              <option value="null">Select</option>
               <option value="true">True </option>
               <option value="false"> False</option>
+            </select>
+            <label>Mentor</label>
+            <select
+              id="setMentor"
+              name="setMentor"
+              onChange={(e) => setMentor(e.target.value)}
+            >
+              <option value="null">Select</option>
+              {
+                mentors.map(mentor => (
+                <option value={`https://pella3.herokuapp.com/mentors/${mentor.id}/`}>
+                  {mentor.name}</option>
+                ))
+              }
             </select>
 
             <button className="createInternship_button" type="submit">

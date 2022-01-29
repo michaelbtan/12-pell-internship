@@ -24,6 +24,7 @@ export default function MentorListings() {
         <MentorCard
             name={mentor.name}
             bio={mentor.bio}
+            imageURL={mentor.imageURL}
             id={mentor.id} />
         </div>
         ))}
