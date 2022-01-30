@@ -9,7 +9,7 @@ export default function DeleteInternship() {
   
   const handleDelete = () => {
     deleteInternship(params.id)
-    // navigate('/')
+    navigate('/')
   }
 
   return (

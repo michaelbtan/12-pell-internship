@@ -4,16 +4,16 @@ import Layout from '../../components/Layout/Layout.js'
 import Signup from '../../components/Signup/Signup.js'
 import Signin from '../../components/Signin/Signin.js'
 
-export default function Account() {
+export default function Account({ setLoggedIn }) {
 
-  const [login, setLogin] = useState(true)
+  const [toggle, setToggle] = useState(true)
 
   const handleSignIn = () => {
-    setLogin(true);
+    setToggle(true);
   };
 
   const handleCreate = () => {
-    setLogin(false);
+    setToggle(false);
   };
 
 
@@ -21,7 +21,7 @@ export default function Account() {
     <Layout>
       <div className="account_container">
         <div className="login_toggle">
-          {login ?
+          {toggle ?
             <>
               <button className="signin_toggle" onClick={handleSignIn}>
                 Login
@@ -41,7 +41,7 @@ export default function Account() {
             </>
           }
         </div>
-        {login ? <Signin /> : <Signup /> }
+        {toggle ? <Signin setLoggedIn={setLoggedIn}/> : <Signup /> }
       </div>
     </Layout>
   )}

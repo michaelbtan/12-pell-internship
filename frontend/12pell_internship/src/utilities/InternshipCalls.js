@@ -29,7 +29,7 @@ export const createInternship = async (internship) => {
 
 export const updateInternship = async (id, internship) => {
   try {
-    const res = await api.put(`/internships/${id}`, internship);
+    const res = await api.put(`/internships/${id}/`, internship);
     return res.data;
   } catch (error) {
     throw error;
@@ -38,7 +38,7 @@ export const updateInternship = async (id, internship) => {
 
 export const deleteInternship = async (id) => {
   try {
-    const res = await api.delete(`/internships/${id}`)
+    const res = await api.delete(`/internships/${id}/`)
     return res.data;
   } catch (error) {
     throw error;
