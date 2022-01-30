@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from pella3.models import Mentor, Internship, Referral, Mentee
+from django.contrib.auth.models import User
+
 
 class MentorSerializer(serializers.HyperlinkedModelSerializer):
   internships = serializers.StringRelatedField(many=True)
@@ -22,3 +24,10 @@ class MenteeSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Mentee
     fields = ['id', 'name', 'email', 'interest']
+
+class UserSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        return User.objects.create_superuser(**validated_data)
+    class Meta:
+        model = User
+        fields = ['username', 'password', 'email']

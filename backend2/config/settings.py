@@ -16,7 +16,6 @@ import dj_database_url
 
 from dotenv import load_dotenv
 load_dotenv()
-SECRET_KEY = os.getenv('SECRET_KEY')
 IS_PRODUCTION = os.getenv('PRODUCTION') == 'yes'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,6 +28,7 @@ else:
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-o^9a=+t(ap%jt&=d!jy$+t$p^22g=_9vh*b6!7z-lm2@k)-!yr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -64,8 +64,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
-CORS_ORIGIN_ALLOW_ALL = True
-
 
 TEMPLATES = [
     {
@@ -169,9 +167,7 @@ REST_FRAMEWORK = {
   'DEFAULT_AUTHENTICATION_CLASSES': (
     'rest_framework_simplejwt.authentication.JWTAuthentication',
   ),
-  #  'DEFAULT_PERMISSION_CLASSES': (
-  #       'rest_framework.permissions.IsAdminUser'
-  #  ),
 }
 
 CORS_ALLOW_ORIGINS = ["http://localhost:3000"]
+CORS_ORIGIN_ALLOW_ALL = True

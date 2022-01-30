@@ -1,6 +1,8 @@
 from ast import BinOp
 import email
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class Mentor(models.Model):
   name = models.CharField(max_length=100)
@@ -18,6 +20,8 @@ class Internship(models.Model):
   industry = models.CharField(max_length=100)
   paid = models.BooleanField()
   mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE, related_name="internships")
+  owner = models.ForeignKey(
+    User, related_name="internships", on_delete=models.CASCADE, null=True)
 
   def __str__(self):
     return self.title
