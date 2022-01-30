@@ -27,11 +27,13 @@ router.register('internships', views.InternshipViewSet)
 router.register('referrals', views.ReferralViewSet)
 router.register('mentees', views.MenteeViewSet)
 
+
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('login/', TokenObtainPairView.as_view()),
     path('refresh-token/', TokenRefreshView.as_view()),
+    path('auth/', include('pella3.urls'))
 ] 
 
