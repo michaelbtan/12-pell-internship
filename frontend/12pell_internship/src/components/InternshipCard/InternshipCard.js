@@ -6,8 +6,8 @@ export default function InternshipCard(props) {
   console.log(props)
   return (
     <div className="internship_card">
-      <img src={props.imageURL} height="250px" width="250px" alt='Internship Pic' />
-      <div>
+      <img className="internship_card_image" src={props.imageURL} alt='Internship Pic' />
+      <div className="internship_card_description">
         <h1>{props.title}</h1>
         <p>{props.description}</p>
         <Link to={`/internships/${props.id}`}>See More</Link>

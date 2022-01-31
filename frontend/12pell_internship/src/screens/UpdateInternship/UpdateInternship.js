@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { getInternship, updateInternship } from '../../utilities/InternshipCalls'
 import './UpdateInternship.css'
 import Layout from '../../components/Layout/Layout.js'
 import { getMentors } from "../../utilities/MentorCalls";
 
 export default function UpdateInternship() {
+
+  const navigate = useNavigate();
 
   const [mentors, setMentors] = useState([])
   const [mentor, setMentor] = useState()
@@ -44,6 +46,7 @@ export default function UpdateInternship() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await updateInternship(params.id, internship)
+    navigate('/')
   }
 
   return (

@@ -4,10 +4,18 @@
   align-items: center;
   background: url("https://images.squarespace-cdn.com/content/v1/5ddda4a0bd77ae126a25a85d/1575002670968-FZ3FCAK7ZYACHDMWO0CW/34582999_518162545266664_1441882377386196992_o.jpg?format=2500w");
   height: 80vh;
-  background-size: 100%
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .pell_header_image  {
-  height: 650px;
-  width: 650px;
+    height: 40em;
+    width: 40em;
+    opacity: 1;
+    /* transition: opacity 2000ms linear 0.5s; */
 }
+
+/* .pell_header_image:hover  {
+  opacity: 1;
+} */
